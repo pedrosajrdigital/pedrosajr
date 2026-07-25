@@ -12,7 +12,7 @@
         body { background-color: #0f1115; color: #ffffff; font-family: 'Jost', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* HEADER & FOOTER (Para manter a formatação ao injetar) */
+        /* HEADER & FOOTER (Para evitar bugs de carregamento inicial) */
         .site-header { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(15, 17, 21, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); z-index: 1000; padding: 20px 0; transition: all 0.3s ease; }
         .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
         .header-logo { height: 32px; width: auto; display: block; }
@@ -33,7 +33,6 @@
         .footer-legal a { color: #8c92a0; text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
         .footer-legal a:hover { color: #ffffff; }
 
-        /* BOTOES GERAIS */
         .btn { display: inline-block; padding: 16px 32px; font-size: 1rem; font-weight: 500; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; cursor: pointer; text-align: center; }
         .btn-primary { background-color: #ffffff; color: #0f1115; border: 1px solid #ffffff; }
         .btn-primary:hover { background-color: #e0e0e0; transform: translateY(-2px); }
@@ -46,25 +45,35 @@
         .page-subtitle { font-size: 1.25rem; color: #b0b5c0; max-width: 700px; margin: 0 auto; }
 
         .portfolio-section { padding: 100px 0; background-color: #0f1115; }
-        .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        
+        /* Grid configurado para 2 colunas para destacar textos maiores */
+        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        
         .project-card { background-color: #22252B; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
         .project-card:hover { transform: translateY(-8px); border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); }
-        .project-image { width: 100%; height: 240px; background-size: cover; background-position: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .project-info { padding: 40px 30px; display: flex; flex-direction: column; flex-grow: 1; }
-        .project-title { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; color: #ffffff; letter-spacing: -0.5px; }
-        .project-text { color: #8c92a0; line-height: 1.7; font-size: 1rem; margin-bottom: 30px; flex-grow: 1; }
+        .project-image { width: 100%; height: 300px; background-size: cover; background-position: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .project-info { padding: 40px 40px; display: flex; flex-direction: column; flex-grow: 1; }
+        .project-title { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 15px; color: #ffffff; letter-spacing: -0.5px; }
+        .project-text { color: #8c92a0; line-height: 1.7; font-size: 1.05rem; margin-bottom: 30px; flex-grow: 1; }
+        
+        .project-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+        .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 6px 12px; background-color: rgba(0, 210, 211, 0.1); color: #00D2D3; border-radius: 4px; font-weight: 600; }
+
         .project-btn { text-align: center; width: 100%; padding: 14px 0; }
 
-        .action-banner { background-color: #00D2D3; color: #0f1115; padding: 80px 20px; text-align: center; }
+        .action-banner { background-color: #00D2D3; color: #0f1115; padding: 80px 20px; text-align: center; margin: 40px 0; border-radius: 8px;}
         .action-banner h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px; }
 
-        @media (max-width: 992px) { .projects-grid, .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 992px) { 
+            .projects-grid, .footer-grid { grid-template-columns: 1fr; } 
+        }
         @media (max-width: 768px) {
             .header-container { flex-direction: column; gap: 15px; }
             .main-nav ul { gap: 20px; flex-wrap: wrap; justify-content: center; }
             .page-title { font-size: 2.5rem; }
-            .projects-grid, .footer-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+            .project-image { height: 200px; }
         }
     </style>
 </head>
@@ -75,9 +84,9 @@
 
     <section class="page-hero">
         <div class="container">
-            <span class="overline">O Resultado Prático</span>
+            <span class="overline">Nosso Histórico</span>
             <h1 class="page-title">Projetos Tracionados</h1>
-            <p class="page-subtitle">Marcas que elevaram sua relevância, volume de público e faturamento através da nossa metodologia de engenharia de crescimento.</p>
+            <p class="page-subtitle">Não vendemos peças gráficas, estruturamos crescimento. Conheça as marcas que elevaram sua relevância e faturamento através da nossa metodologia.</p>
         </div>
     </section>
 
@@ -85,42 +94,113 @@
         <div class="container">
             <div class="projects-grid">
                 
+                <!-- CASE 1: Mercedes-Benz -->
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #1a1d24; background-image: linear-gradient(to top, rgba(15,17,21,0.9), rgba(15,17,21,0.1)), url('office.png');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Mercedes-Benz</h3>
+                        <div class="project-tags">
+                            <span class="tag">Recuperação de Share</span>
+                            <span class="tag">Business Development</span>
+                        </div>
+                        <p class="project-text">Engenharia comercial aplicada à recuperação de contas Enterprise. Estruturamos a unidade de Business Development do zero e reconstruímos a ponte diplomática e técnica. A intervenção reverteu um cenário de quebra de contrato, tracionando o <em>Market Share</em> de 5% para 50% em apenas 6 meses de gestão cirúrgica.</p>
+                        <a href="contato.html" class="btn btn-secondary project-btn">Aplicar no meu negócio</a>
+                    </div>
+                </div>
+
+                <!-- CASE 2: Ford Motor Company -->
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #1a1d24; background-image: linear-gradient(to top, rgba(15,17,21,0.9), rgba(15,17,21,0.1)), url('back2.jpeg');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Ford (Campanha Fiesta)</h3>
+                        <div class="project-tags">
+                            <span class="tag">Gestão de Crise</span>
+                            <span class="tag">Inovação de Produto</span>
+                        </div>
+                        <p class="project-text">Transformação de uma crise de <em>recall</em> milionária em nova linha de receita. Através de engenharia analítica, identificamos a falha estrutural no projeto original (transmissão) e desenvolvemos uma solução técnica de alto impacto e baixo custo (inserto de reforço). A estratégia não apenas salvou a operação, como gerou um novo e lucrativo contrato de fornecimento.</p>
+                        <a href="contato.html" class="btn btn-secondary project-btn">Aplicar no meu negócio</a>
+                    </div>
+                </div>
+
+                <!-- CASE 3: Mahle Group -->
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #0f1115; background-image: linear-gradient(to top, rgba(15,17,21,0.9), rgba(15,17,21,0.1)), url('orthographic.png');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Mahle Group</h3>
+                        <div class="project-tags">
+                            <span class="tag">Lucratividade Líquida</span>
+                            <span class="tag">Pricing Strategy</span>
+                        </div>
+                        <p class="project-text">Revisão profunda da matriz de custos e eficiência produtiva. Nossa intervenção mapeou a ociosidade operacional e reestruturou o fluxo de propostas B2B. A renegociação embasada em dados gerou um aumento imediato de mais de 30% na lucratividade líquida da planta, transformando faturamento bruto em margem real.</p>
+                        <a href="contato.html" class="btn btn-secondary project-btn">Aplicar no meu negócio</a>
+                    </div>
+                </div>
+
+                <!-- CASE 4: Luax Consulting -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url('office_escuro.png');"></div>
                     <div class="project-info">
-                        <h3 class="project-title">Bongas Brasil</h3>
-                        <p class="project-text">Implementação e automação de inteligência de vendas. Elevação do padrão visual e estratégia orientada ao mercado corporativo de alto valor.</p>
-                        <a href="contato.html" class="btn btn-secondary project-btn">Quero este resultado</a>
+                        <h3 class="project-title">Luax Consulting</h3>
+                        <div class="project-tags">
+                            <span class="tag">Business Plan</span>
+                            <span class="tag">Integração B2B</span>
+                        </div>
+                        <p class="project-text">Reformulação completa da arquitetura do negócio. Operamos a potencialização da proposta de valor, integração entre plataformas sistêmicas e unificação de dados corporativos. Além da redefinição estratégica de logotipo e conteúdo para o mercado de alta performance.</p>
+                        <a href="contato.html" class="btn btn-secondary project-btn">Aplicar no meu negócio</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('orthographic.png');"></div>
-                    <div class="project-info">
-                        <h3 class="project-title">Zanardo Válvulas</h3>
-                        <p class="project-text">Estratégia de posicionamento digital, reestruturação da presença online e fortalecimento institucional no setor industrial brasileiro.</p>
-                        <a href="contato.html" class="btn btn-secondary project-btn">Quero este resultado</a>
-                    </div>
-                </div>
-
+                <!-- CASE 5: In-Moving Company -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url('office.png');"></div>
                     <div class="project-info">
-                        <h3 class="project-title">Luax Consulting</h3>
-                        <p class="project-text">Potencialização da proposta de valor, construção do design digital e redefinição de branding e posicionamento no mercado.</p>
-                        <a href="contato.html" class="btn btn-secondary project-btn">Quero este resultado</a>
+                        <h3 class="project-title">In-Moving Company</h3>
+                        <div class="project-tags">
+                            <span class="tag">Implantação CRM</span>
+                            <span class="tag">Eventos</span>
+                        </div>
+                        <p class="project-text">Nossa engenharia atuou na espinha dorsal comercial da empresa. Realizamos uma revisão profunda da proposta, executamos o desenvolvimento do <em>Business Plan</em> e implementamos o CRM para previsibilidade de vendas. O projeto culminou na elaboração e organização de eventos presenciais de autoridade.</p>
+                        <a href="contato.html" class="btn btn-secondary project-btn">Aplicar no meu negócio</a>
+                    </div>
+                </div>
+
+                <!-- CASE 6: Bongas Brasil -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('orthographic.png');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Bongas Brasil</h3>
+                        <div class="project-tags">
+                            <span class="tag">Vendas</span>
+                            <span class="tag">Posicionamento</span>
+                        </div>
+                        <p class="project-text">Migração do modelo tradicional para um ecossistema digital inteligente. Implementação e automação de inteligência de vendas com elevação estética de alto padrão. Estratégia orientada exclusivamente para dominar o mercado corporativo de alto valor e ticket médio elevado.</p>
+                        <a href="contato.html" class="btn btn-secondary project-btn">Aplicar no meu negócio</a>
+                    </div>
+                </div>
+
+                <!-- CASE 7: Zanardo Válvulas -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('office_escuro.png');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Zanardo Válvulas</h3>
+                        <div class="project-tags">
+                            <span class="tag">Setor Industrial</span>
+                            <span class="tag">Posicionamento B2B</span>
+                        </div>
+                        <p class="project-text">Estratégia de posicionamento digital robusto para o setor da indústria pesada. Reestruturação da presença online, fortalecimento institucional perante concorrentes multinacionais e engenharia de tráfego (Ads) voltada para a captação de grandes distribuidores no cenário brasileiro.</p>
+                        <a href="contato.html" class="btn btn-secondary project-btn">Aplicar no meu negócio</a>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <section class="action-banner">
-        <div class="container">
-            <h2>Sua marca é o próximo case?</h2>
-            <p style="margin-bottom: 30px; font-size: 1.125rem; font-weight: 500;">Vamos estruturar uma engenharia de tração focada no seu faturamento.</p>
-            <a href="contato.html" class="btn btn-primary" style="background-color: #0f1115; color: #ffffff; border: none;">Falar com um Consultor</a>
+            <!-- FAIXA DE AÇÃO (CTA) NO MEIO DA PÁGINA -->
+            <div class="action-banner">
+                <h2>O próximo case de sucesso é o seu.</h2>
+                <p style="margin-bottom: 30px; font-size: 1.125rem; font-weight: 500;">Vamos estruturar uma engenharia de tração focada exclusivamente no seu faturamento.</p>
+                <a href="contato.html" class="btn btn-primary" style="background-color: #0f1115; color: #ffffff; border: none;">Falar com um Consultor</a>
+            </div>
+
         </div>
     </section>
 
