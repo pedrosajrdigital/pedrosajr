@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | Pedrosa Jr</title>
+    <title>Contato | Pedrosa Jr Digital Traction</title>
+    <link rel="icon" type="image/png" href="favicon3.png">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Montserrat:wght@700;800&display=swap');
@@ -105,7 +106,7 @@
                         <div class="method-text">
                             <h4>E-mail</h4>
                             <p>Retorno em até 24 horas úteis.</p>
-                            <a href="mailto:contato@pedrosajr.com.br">contato@pedrosajr.com.br</a>
+                            <a href="mailto:tracione@pedrosajr.com.br">tracione@pedrosajr.com.br</a>
                         </div>
                     </div>
 
@@ -114,29 +115,34 @@
                         <div class="method-text">
                             <h4>WhatsApp Comercial</h4>
                             <p>Para alinhamentos rápidos.</p>
-                            <a href="#">+55 (11) 99999-9999</a>
+                            <a href="#">+55 (15) 98102 7080</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ... existing code ... -->
                 <div class="contact-form-box">
-                    <form action="#" method="POST">
+                    <form action="https://formsubmit.co/tracione@pedrosajr.com.br" method="POST">
+                        
+                        <!-- Configurações ocultas para o formulário funcionar melhor -->
+                        <input type="hidden" name="_subject" value="Novo Contato - Site Pedrosa Jr">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
                         <div class="form-group">
                             <label for="nome">Seu Nome / Empresa</label>
-                            <input type="text" id="nome" class="form-control" placeholder="Ex: João - Empresa X" required>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Ex: João - Empresa X" required>
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail Corporativo</label>
-                            <input type="email" id="email" class="form-control" placeholder="joao@empresa.com.br" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="joao@empresa.com.br" required>
                         </div>
                         <div class="form-group">
                             <label for="mensagem">Como podemos ajudar?</label>
-                            <textarea id="mensagem" class="form-control" placeholder="Fale resumidamente sobre o seu projeto ou necessidade..." required></textarea>
+                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Fale resumidamente sobre o seu projeto ou necessidade..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                     </form>
-                </div>
-
             </div>
         </div>
     </section>
