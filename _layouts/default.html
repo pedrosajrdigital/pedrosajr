@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    
+    <!-- Chamando o CSS que você separou -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHR56KXL6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3FHR56KXL6');
+    </script>
+</head>
+<body>
+
+    <!-- O Jekyll injeta o seu cabeçalho aqui, sem precisar de JavaScript -->
+    {% include header.html %}
+
+    <!-- O conteúdo da página em PT ou EN será injetado aqui -->
+    {{ content }}
+
+    <!-- O Jekyll injeta o seu rodapé aqui -->
+    {% include footer.html %}
+
+</body>
+</html>
