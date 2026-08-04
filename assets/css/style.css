@@ -555,15 +555,15 @@
         /* ==========================================================================
    CABEÇALHO E NAVEGAÇÃO 
    ========================================================================== */
-<!-- alt .header-container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%; /* Dá um respiro lateral elegante */
     background-color: #050505; /* Fundo escuro e sólido */
     border-bottom: 1px solid #111;
-} -->
-.header-container {
+}
+<!-- no work .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -580,7 +580,8 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-}
+ --> No work
+ 
 .main-nav ul {
     display: flex;
     list-style: none; /* Remove as bolinhas da lista */
