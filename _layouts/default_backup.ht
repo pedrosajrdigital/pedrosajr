@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <!-- Chamando o CSS direto da raiz -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!--    cabecalho condicional a lingua -->
+<header class="header-container">
+    {% if page.lang == 'en' %}
+        <!-- APENAS MENU EM INGLÊS -->
+        <a href="/en/" class="logo-link">
+            <img src="/black_new.png" alt="Pedrosa Jr Logo" class="header-logo" style="max-height: 45px; width: auto;"> 
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/en/#metodologia">What We Deliver</a></li>
+                <li><a href="/en/#projetos">Tractioned Projects</a></li>
+                <li><a href="/en/#contato">Contact</a></li>
+                <li><a href="/">PT</a> | <a href="/en/">EN</a></li>
+            </ul>
+        </nav>
+    {% else %}
+        <!-- APENAS MENU EM PORTUGUÊS -->
+        <a href="/" class="logo-link">
+            <img src="/assets/img/logo.png" alt="Logo Pedrosa Jr" class="header-logo" style="max-height: 45px; width: auto;"> 
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/#metodologia">O que entregamos</a></li>
+                <li><a href="/#projetos">Projetos Tracionados</a></li>
+                <li><a href="/#contato">Contato</a></li>
+                <li><a href="/">PT</a> | <a href="/en/">EN</a></li>
+            </ul>
+        </nav>
+    {% endif %}
+</header>
+
+<body>
+    
+    <!-- Puxa o cabeçalho da pasta _includes -->
+    {% include header.html %}
+
+    <!-- AQUI É A MÁGICA: Injeta o conteúdo do index.html -->
+    {{ content }}
+
+    <!-- Puxa o rodapé da pasta _includes -->
+    {% include footer.html %}
+
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header-container');
+        if (window.scrollY > 30) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    </script>
+
+</body>
+</html>
