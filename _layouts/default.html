@@ -20,5 +20,17 @@
     <!-- Puxa o rodapé da pasta _includes -->
     {% include footer.html %}
 
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header-container');
+        if (window.scrollY > 30) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    </script>
+    
 </body>
 </html>
