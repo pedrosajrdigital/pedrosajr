@@ -552,32 +552,55 @@
             .action-banner { padding: 60px 20px; }
         }
 
-
-
-     /* Header fixo 
-     e transparente no topo */
+        /* Header fixo, full-width e alinhado corretamente */
 .header-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw; /* Ocupa 100% da largura da viewport */
+    max-width: 100%;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 50px;
-    z-index: 1000;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease;
+    padding: 20px 50px;
+    z-index: 9999;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease;
     background-color: transparent; 
 }
 
-/* Header com fundo escuro e efeito fosco ao rolar a página */
+/* Quando rolar a página */
 .header-container.scrolled {
-    background-color: rgba(10, 10, 10, 0.85); /* Preto com leve transparência */
-    backdrop-filter: blur(12px); /* Efeito vidro fosco */
-    -webkit-backdrop-filter: blur(12px); /* Compatibilidade Safari */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Linha sutil de separação */
-    padding: 15px 50px; /* Encolhe sutilmente ao rolar */
+    background-color: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 15px 50px;
 }
 
+/* Organização interna da navegação para evitar sobreposição */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+
+
+    
     </style>
 

@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<!-- CABEÇALHO condicional a lingua-->
+<!--    cabecalho condicional a lingua -->
 <header class="header-container">
     {% if page.lang == 'en' %}
-        <!-- HEADER EM INGLÊS -->
+        <!-- APENAS MENU EM INGLÊS -->
         <a href="/en/" class="logo-link">
             <img src="/black_new.png" alt="Pedrosa Jr Logo" class="header-logo" style="max-height: 45px; width: auto;"> 
         </a>
@@ -26,7 +26,7 @@
             </ul>
         </nav>
     {% else %}
-        <!-- HEADER EM PORTUGUÊS (PADRÃO) -->
+        <!-- APENAS MENU EM PORTUGUÊS -->
         <a href="/" class="logo-link">
             <img src="/assets/img/logo.png" alt="Logo Pedrosa Jr" class="header-logo" style="max-height: 45px; width: auto;"> 
         </a>
@@ -40,6 +40,7 @@
         </nav>
     {% endif %}
 </header>
+
 <body>
     
     <!-- Puxa o cabeçalho da pasta _includes -->
