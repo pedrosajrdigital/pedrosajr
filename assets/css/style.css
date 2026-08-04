@@ -302,3 +302,79 @@ h1, h2, h3, h4 {
     .methodology-wrapper { grid-template-columns: 1fr; }
     .section-title { font-size: 2rem; }
 }
+
+
+
+/* ==========================================================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+.site-header {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid #222;
+    padding: 20px 0;
+    position: sticky; /* Mantém o menu no topo ao rolar a página */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.site-logo img {
+    height: 40px; /* Altura controlada para não desalinhar o menu */
+    width: auto;
+    display: block;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.site-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: var(--accent);
+}
+
+.lang-switch {
+    border-left: 1px solid #333;
+    padding-left: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+.site-footer {
+    background-color: #000000;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 60px;
+}
+
+.site-footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
