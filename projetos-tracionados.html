@@ -4,6 +4,24 @@ title: Projetos Tracionados | PedrosaJr Digital Traction
 lang: pt
 ---
 
+<style>
+    /* Corrige a sobreposição do header fixo */
+    .page-hero {
+        padding-top: 180px !important;
+    }
+    /* Restaura o grid de 2 colunas dos cases */
+    .projects-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px !important;
+    }
+    @media (max-width: 992px) {
+        .projects-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+
 <!-- Remova o <!DOCTYPE html>, <head>, <body>, e as tags de placeholder -->
 
 <section class="page-hero">
