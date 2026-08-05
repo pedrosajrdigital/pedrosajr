@@ -4,7 +4,7 @@ title: O que entregamos | PedrosaJr Digital Traction
 lang: pt
 ---
 
-<style>
+<!style-old>
     /* Corrige a sobreposição do header fixo e o espaçamento */
     .page-hero {
         padding-top: 180px !important;
@@ -22,8 +22,42 @@ lang: pt
             gap: 50px !important;
         }
     }
-</style>
+<!style-old>
+<style>
+    /* Corrige a sobreposição do header fixo e o espaçamento */
+    .page-hero {
+        padding-top: 180px !important;
+    }
+    /* Restaura o grid de 2 colunas do fundador e da empresa */
+    .founder-grid, .company-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 80px !important;
+        align-items: center !important;
+    }
+    
+    /* LIMITA O TAMANHO DA FOTO DO FUNDADOR */
+    .founder-photo {
+        max-width: 400px !important;
+        max-height: 480px !important;
+        margin: 0 auto !important;
+    }
+    .founder-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
 
+    @media (max-width: 992px) {
+        .founder-grid, .company-grid {
+            grid-template-columns: 1fr !important;
+            gap: 50px !important;
+        }
+        .founder-photo {
+            max-width: 300px !important;
+        }
+    }
+</style>
 
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHR56KXL6"></script>
