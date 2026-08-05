@@ -3,27 +3,90 @@ layout: default
 title: Contato | Pedrosa Jr Digital Traction
 lang: pt
 ---
+---
+layout: default
+title: Contato | Pedrosa Jr Digital Traction
+lang: pt
+---
 
 <style>
     /* Corrige a sobreposição do header fixo e o espaçamento */
     .page-hero {
         padding-top: 180px !important;
     }
-    /* Restaura o grid de 2 colunas do fundador e da empresa */
-    .founder-grid, .company-grid {
+    
+    /* Restaura o grid de 2 colunas da página de contato */
+    .contact-grid {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 80px !important;
         align-items: center !important;
     }
+
+    /* Estiliza e espaça corretamente a caixa do formulário e os ícones */
+    .contact-form-box {
+        background-color: #22252B !important;
+        padding: 50px 40px !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .contact-method {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .method-icon {
+        width: 50px !important;
+        height: 50px !important;
+        background-color: #22252B !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        color: #00D2D3 !important;
+        font-weight: bold !important;
+        font-size: 1.2rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .form-group {
+        margin-bottom: 25px !important;
+    }
+
+    .form-group label {
+        display: block !important;
+        margin-bottom: 10px !important;
+        color: #b0b5c0 !important;
+        font-size: 0.95rem !important;
+    }
+
+    .form-control {
+        width: 100% !important;
+        padding: 15px 20px !important;
+        background-color: rgba(15, 17, 21, 0.6) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 4px !important;
+        color: #ffffff !important;
+        font-family: 'Jost', sans-serif !important;
+        font-size: 1rem !important;
+    }
+
+    textarea.form-control {
+        min-height: 150px !important;
+        resize: vertical !important;
+    }
+
     @media (max-width: 992px) {
-        .founder-grid, .company-grid {
+        .contact-grid {
             grid-template-columns: 1fr !important;
             gap: 50px !important;
         }
     }
 </style>
-
 
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHR56KXL6"></script>
