@@ -6,7 +6,77 @@
     <title>Projetos Tracionados | PedrosaJr Digital Traction</title>
     <link rel="icon" type="image/png" href="favicon3.png">
     
-    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Montserrat:wght@700;800&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0f1115; color: #ffffff; font-family: 'Jost', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER & FOOTER (Para evitar bugs de carregamento inicial) */
+        .site-header { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(15, 17, 21, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); z-index: 1000; padding: 20px 0; transition: all 0.3s ease; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .header-logo { height: 32px; width: auto; display: block; }
+        .main-nav ul { display: flex; list-style: none; gap: 40px; }
+        .main-nav a { color: #b0b5c0; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; }
+        .main-nav a:hover { color: #ffffff; }
+
+        .site-footer { background-color: #0b0c0f; border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 80px 0 40px; color: #8c92a0; font-size: 0.95rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+        .footer-logo { height: 40px; width: auto; display: block; margin-bottom: 20px; }
+        .footer-col-title { font-family: 'Montserrat', sans-serif; color: #ffffff; font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.5px; }
+        .footer-brand p { line-height: 1.7; max-width: 350px; margin-bottom: 20px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #8c92a0; text-decoration: none; transition: color 0.3s ease; }
+        .footer-links a:hover { color: #ffffff; }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+        .footer-legal a { color: #8c92a0; text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
+        .footer-legal a:hover { color: #ffffff; }
+
+        .btn { display: inline-block; padding: 16px 32px; font-size: 1rem; font-weight: 500; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; cursor: pointer; text-align: center; }
+        .btn-primary { background-color: #ffffff; color: #0f1115; border: 1px solid #ffffff; }
+        .btn-primary:hover { background-color: #e0e0e0; transform: translateY(-2px); }
+        .btn-secondary { background-color: transparent; color: #ffffff; border: 1px solid #4a4d55; }
+        .btn-secondary:hover { border-color: #ffffff; background-color: rgba(255, 255, 255, 0.05); transform: translateY(-2px); }
+
+        .page-hero { padding: 180px 20px 100px; background-image: linear-gradient(to bottom, rgba(15, 17, 21, 0.8), #0f1115), url('back1.jpeg'); background-size: cover; background-position: center; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .overline { display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 4px; color: #8c92a0; margin-bottom: 20px; font-weight: 500; }
+        .page-title { font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 24px; color: #ffffff; }
+        .page-subtitle { font-size: 1.25rem; color: #b0b5c0; max-width: 700px; margin: 0 auto; }
+
+        .portfolio-section { padding: 100px 0; background-color: #0f1115; }
+        
+        /* Grid configurado para 2 colunas para destacar textos maiores */
+        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        
+        .project-card { background-color: #22252B; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
+        .project-card:hover { transform: translateY(-8px); border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); }
+        .project-image { width: 100%; height: 300px; background-size: cover; background-position: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .project-info { padding: 40px 40px; display: flex; flex-direction: column; flex-grow: 1; }
+        .project-title { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 15px; color: #ffffff; letter-spacing: -0.5px; }
+        .project-text { color: #8c92a0; line-height: 1.7; font-size: 1.05rem; margin-bottom: 30px; flex-grow: 1; }
+        
+        .project-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+        .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 6px 12px; background-color: rgba(0, 210, 211, 0.1); color: #00D2D3; border-radius: 4px; font-weight: 600; }
+
+        .project-btn { text-align: center; width: 100%; padding: 14px 0; }
+
+        .action-banner { background-color: #00D2D3; color: #0f1115; padding: 80px 20px; text-align: center; margin: 40px 0; border-radius: 8px;}
+        .action-banner h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px; }
+
+        @media (max-width: 992px) { 
+            .projects-grid, .footer-grid { grid-template-columns: 1fr; } 
+        }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 15px; }
+            .main-nav ul { gap: 20px; flex-wrap: wrap; justify-content: center; }
+            .page-title { font-size: 2.5rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+            .project-image { height: 200px; }
+        }
+    </style>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHR56KXL6"></script>
 <script>
