@@ -5,24 +5,25 @@ lang: pt
 ---
 
 <style>
-    /* Corrige a sobreposição do header fixo */
+    /* Corrige a sobreposição do header fixo e o espaçamento */
     .page-hero {
         padding-top: 180px !important;
     }
-    /* Restaura o grid de 2 colunas da página de contato */
-    .contact-grid {
+    /* Restaura o grid de 2 colunas do fundador e da empresa */
+    .founder-grid, .company-grid {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 80px !important;
         align-items: center !important;
     }
     @media (max-width: 992px) {
-        .contact-grid {
+        .founder-grid, .company-grid {
             grid-template-columns: 1fr !important;
             gap: 50px !important;
         }
     }
 </style>
+
 
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHR56KXL6"></script>
