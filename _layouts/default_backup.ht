@@ -66,3 +66,74 @@
 
 </body>
 </html>
+
+
+
+
+Backup2
+
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <!-- Chamando o CSS direto da raiz -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CABEÇALHO CONDICIONAL POR IDIOMA (AGORA DENTRO DO BODY) -->
+    <header class="header-container">
+        {% if page.lang == 'en' %}
+            <!-- APENAS MENU EM INGLÊS -->
+            <a href="/en/" class="logo-link">
+                <img src="black_new.png" alt="Pedrosa Jr Logo" class="header-logo" style="max-height: 45px; width: auto;"> 
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/en/#metodologia">What We Deliver</a></li>
+                    <li><a href="/en/#projetos">Tractioned Projects</a></li>
+                    <li><a href="/en/#contato">Contact</a></li>
+                    <li><a href="/">PT</a> | <a href="/en/">EN</a></li>
+                </ul>
+            </nav>
+        {% else %}
+            <!-- APENAS MENU EM PORTUGUÊS -->
+            <a href="/" class="logo-link">
+                <img src="/black_new.png" alt="Logo Pedrosa Jr" class="header-logo" style="max-height: 45px; width: auto;"> 
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/o-que-entregamos.html">O que entregamos</a></li>
+                    <li><a href="/projetos-tracionados.html">Projetos Tracionados</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                    <li><a href="/">PT</a> | <a href="/en/">EN</a></li>
+                </ul>
+            </nav>
+        {% endif %}
+    </header>
+
+    <!-- INJETA O CONTEÚDO DA PÁGINA -->
+    {{ content }}
+
+    <!-- PUXA O RODAPÉ -->
+    {% include footer.html %}
+
+    <!-- SCRIPT DE ROLAGEM DO HEADER -->
+    <script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header-container');
+        if (window.scrollY > 30) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    </script>
+
+</body>
+</html>
