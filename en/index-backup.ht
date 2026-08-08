@@ -102,7 +102,7 @@ title: PedrosaJr - Digital Traction Engineering
             
             <!-- Highlight 1: Mercedes -->
             <div class="project-card">
-                <div class="project-image" style="background-image: url('../office_escuro.png');"></div>
+                <div class="project-image" style="background-image: url('/images/mb-case.png');"></div>
                 <div class="project-info">
                     <h3 class="project-title">Mercedes-Benz</h3>
                     <p class="project-text">Diplomatic intervention and structuring of the Business Development department, reversing a breach of contract scenario and leveraging Market Share by 50%.</p>
@@ -112,7 +112,7 @@ title: PedrosaJr - Digital Traction Engineering
 
             <!-- Highlight 2: Ford -->
             <div class="project-card">
-                <div class="project-image" style="background-image: url('../back2.jpeg');"></div>
+                <div class="project-image" style="background-image: url('/images/ford-case.png');"></div>
                 <div class="project-info">
                     <h3 class="project-title">Ford (Fiesta Campaign)</h3>
                     <p class="project-text">Crisis engineering in the face of a million-dollar recall. Identification of a systemic flaw and agile development of a technical solution (reinforcement insert), saving the production line.</p>
@@ -122,7 +122,7 @@ title: PedrosaJr - Digital Traction Engineering
 
             <!-- Highlight 3: Mahle -->
             <div class="project-card">
-                <div class="project-image" style="background-image: url('../orthographic.png');"></div>
+                <div class="project-image" style="background-image: url('/images/mahle-case.png');"></div>
                 <div class="project-info">
                     <h3 class="project-title">Mahle Group</h3>
                     <p class="project-text">Leadership in the corporation's most critical plant. Profound review of processes, idleness, and Pricing, generating an immediate increase of over 30% in net profitability.</p>
