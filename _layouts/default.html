@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
 
+    <!-- SEO (title/meta description/Open Graph) e feed do blog, gerados automaticamente -->
+    {% seo %}
+    {% feed_meta %}
+
     <!-- Chamando o CSS direto da raiz -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,6 +27,7 @@
                 <ul>
                     <li><a href="/en/#metodologia">What We Deliver</a></li>
                     <li><a href="/en/#projetos">Tractioned Projects</a></li>
+                    <li><a href="/en/blog.html">Blog</a></li>
                     <li><a href="/en/#contato">Contact</a></li>
                     <li><a href="/">PT</a> | <a href="/en/">EN</a></li>
                 </ul>
@@ -36,6 +41,7 @@
                 <ul>
                     <li><a href="/o-que-entregamos.html">O que entregamos</a></li>
                     <li><a href="/projetos-tracionados.html">Projetos Tracionados</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
                     <li><a href="/contato.html">Contato</a></li>
                     <li><a href="/">PT</a> | <a href="/en/">EN</a></li>
                 </ul>
