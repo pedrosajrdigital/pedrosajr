@@ -2,18 +2,28 @@ title: "Pedrosa Jr | Digital Traction Engineering"
 description: "Engenharia de Tração Digital — estratégia, marca e crescimento sustentável para empresas e projetos de alto valor."
 url: "https://pedrosajr.com.br"
 
-# Deixa os posts do blog com uma URL limpa e datada.
-# Posts em inglês sobrescrevem isso individualmente no front matter (veja BLOG-README.md).
-permalink: /blog/:year/:month/:day/:title/
+# ATENÇÃO: não colocar "permalink:" aqui no nível raiz.
+# No Jekyll, o permalink global também se aplica às páginas comuns. Como o
+# nosso valor termina em barra, ele apagava o ".html" de contato.html,
+# blog.html, o-que-entregamos.html etc., e o menu inteiro do site dava 404.
+# Por isso o permalink dos posts agora fica em "defaults", com escopo de posts.
 
 # Plugins liberados pelo GitHub Pages (não precisa de Gemfile/bundle install):
-# - jekyll-sitemap  -> gera /sitemap.xml automaticamente (ajuda o Google a indexar o site e o blog)
-# - jekyll-seo-tag  -> gera <title>/meta description/Open Graph corretos em cada página, a partir do front matter
+# - jekyll-sitemap  -> gera /sitemap.xml automaticamente
+# - jekyll-seo-tag  -> gera <title>/meta description/Open Graph em cada página
 # - jekyll-feed     -> gera /feed.xml (RSS) do blog
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
 
 # Arquivos/pastas que não devem ser publicados no site
 # (inclui arquivos de backup/rascunho com extensão quebrada que já existiam no repo)
