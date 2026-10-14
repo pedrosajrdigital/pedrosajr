@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Contato | Pedrosa Jr Digital Traction
-lang: pt
+title: Contato | PedrosaJr
+description: Conte o momento da sua empresa e o resultado que busca. Respondo pessoalmente e, se fizer sentido, marcamos uma conversa curta.
+lang: pt-BR
 ---
 
 <style>
@@ -70,6 +71,13 @@ lang: pt
         font-size: 1rem !important;
     }
 
+    .form-note {
+        margin-top: 18px !important;
+        color: #8d93a1 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+
     textarea.form-control {
         min-height: 150px !important;
         resize: vertical !important;
@@ -85,9 +93,9 @@ lang: pt
 
 <section class="page-hero">
         <div class="container">
-            <span class="overline">Vamos conversar</span>
-            <h1 class="page-title">Tracione o seu projeto.</h1>
-            <p class="page-subtitle">Avaliamos o seu momento atual, entendemos as metas de faturamento e apresentamos um plano estruturado de crescimento.</p>
+            <span class="overline">Fale comigo</span>
+            <h1 class="page-title">Vamos conversar sobre o seu projeto.</h1>
+            <p class="page-subtitle">Conte o momento da sua empresa e o resultado que busca. Respondo pessoalmente. Se fizer sentido, marcamos uma conversa curta para alinhar escopo, prazo e valor.</p>
         </div>
     </section>
 
@@ -96,7 +104,7 @@ lang: pt
             <div class="contact-grid">
                 
                 <div class="contact-info-box">
-                    <h3>Canais Diretos</h3>
+                    <h3>Canais</h3>
                     
                     <div class="contact-method">
                         <div class="method-icon">@</div>
@@ -110,19 +118,18 @@ lang: pt
                     <div class="contact-method">
                         <div class="method-icon">W</div>
                         <div class="method-text">
-                            <h4>WhatsApp Comercial</h4>
+                            <h4>WhatsApp</h4>
                             <p>Para alinhamentos rápidos.</p>
                             <a href="https://wa.me/5515981027080">+55 (15) 98102 7080</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- ... existing code ... -->
                 <div class="contact-form-box">
                     <form action="https://formsubmit.co/tracione@pedrosajr.com.br" method="POST">
                         
                         <!-- Configurações ocultas para o formulário funcionar melhor -->
-                        <input type="hidden" name="_subject" value="Novo Contato - Site Pedrosa Jr">
+                        <input type="hidden" name="_subject" value="Novo Lead - Pedrosa Jr">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         
@@ -135,10 +142,15 @@ lang: pt
                             <input type="email" id="email" name="email" class="form-control" placeholder="joao@empresa.com.br" required>
                         </div>
                         <div class="form-group">
-                            <label for="mensagem">Como podemos ajudar?</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Fale resumidamente sobre o seu projeto ou necessidade..." required></textarea>
+                            <label for="whatsapp">WhatsApp (opcional)</label>
+                            <input type="text" id="whatsapp" name="whatsapp" class="form-control" placeholder="Se preferir retorno por WhatsApp">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        <div class="form-group">
+                            <label for="mensagem">Qual é o seu maior desafio hoje?</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Fale resumidamente sobre o seu projeto, o momento da empresa e o resultado que busca..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                        <p class="form-note">Primeira conversa sem compromisso. Depois dela, envio uma proposta por escrito com escopo, prazo e valor.</p>
                     </form>
                 </div>
             </div>
