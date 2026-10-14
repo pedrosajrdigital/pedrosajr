@@ -34,3 +34,8 @@ exclude:
   - "*.htm"
   - "*.tml"
   - "assets/css/Backup.CS"
+  # Páginas soltas que não fazem parte do site (index_alt.html é uma cópia antiga da home
+  # e images/preview.html é um rascunho). Fora do site e do sitemap, para o Google não
+  # indexar duplicatas da página inicial. Os arquivos continuam no repositório.
+  - index_alt.html
+  - images/preview.html
