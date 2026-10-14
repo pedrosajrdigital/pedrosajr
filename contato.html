@@ -70,6 +70,13 @@ lang: pt
         font-size: 1rem !important;
     }
 
+    .form-note {
+        margin-top: 18px !important;
+        color: #8d93a1 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+
     textarea.form-control {
         min-height: 150px !important;
         resize: vertical !important;
@@ -122,7 +129,7 @@ lang: pt
                     <form action="https://formsubmit.co/tracione@pedrosajr.com.br" method="POST">
                         
                         <!-- Configurações ocultas para o formulário funcionar melhor -->
-                        <input type="hidden" name="_subject" value="Novo Contato - Site Pedrosa Jr">
+                        <input type="hidden" name="_subject" value="Novo Lead - Pedrosa Jr">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         
@@ -135,10 +142,15 @@ lang: pt
                             <input type="email" id="email" name="email" class="form-control" placeholder="joao@empresa.com.br" required>
                         </div>
                         <div class="form-group">
-                            <label for="mensagem">Como podemos ajudar?</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Fale resumidamente sobre o seu projeto ou necessidade..." required></textarea>
+                            <label for="whatsapp">WhatsApp (opcional)</label>
+                            <input type="text" id="whatsapp" name="whatsapp" class="form-control" placeholder="Se preferir retorno por WhatsApp">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        <div class="form-group">
+                            <label for="mensagem">Qual é o seu maior desafio hoje?</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Fale resumidamente sobre o seu projeto, o momento da empresa e o resultado que busca..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                        <p class="form-note">Primeira conversa sem compromisso. Depois dela, enviamos uma proposta por escrito com escopo, prazo e valor.</p>
                     </form>
                 </div>
             </div>
