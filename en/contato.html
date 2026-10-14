@@ -1,0 +1,158 @@
+---
+layout: default
+title: Contact | PedrosaJr
+description: Tell me where your company stands and the result you are after. I answer personally and, if it makes sense, we set up a short conversation.
+lang: en
+---
+
+<style>
+    /* Corrige a sobreposição do header fixo e o espaçamento */
+    .page-hero {
+        padding-top: 180px !important;
+    }
+    
+    /* Restaura o grid de 2 colunas da página de contato */
+    .contact-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 80px !important;
+        align-items: center !important;
+    }
+
+    /* Estiliza e espaça corretamente a caixa do formulário e os ícones */
+    .contact-form-box {
+        background-color: #22252B !important;
+        padding: 50px 40px !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .contact-method {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .method-icon {
+        width: 50px !important;
+        height: 50px !important;
+        background-color: #22252B !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        color: #00D2D3 !important;
+        font-weight: bold !important;
+        font-size: 1.2rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .form-group {
+        margin-bottom: 25px !important;
+    }
+
+    .form-group label {
+        display: block !important;
+        margin-bottom: 10px !important;
+        color: #b0b5c0 !important;
+        font-size: 0.95rem !important;
+    }
+
+    .form-control {
+        width: 100% !important;
+        padding: 15px 20px !important;
+        background-color: rgba(15, 17, 21, 0.6) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 4px !important;
+        color: #ffffff !important;
+        font-family: 'Jost', sans-serif !important;
+        font-size: 1rem !important;
+    }
+
+    .form-note {
+        margin-top: 18px !important;
+        color: #8d93a1 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+
+    textarea.form-control {
+        min-height: 150px !important;
+        resize: vertical !important;
+    }
+
+    @media (max-width: 992px) {
+        .contact-grid {
+            grid-template-columns: 1fr !important;
+            gap: 50px !important;
+        }
+    }
+</style>
+
+<section class="page-hero">
+        <div class="container">
+            <span class="overline">Talk to me</span>
+            <h1 class="page-title">Let's talk about your project.</h1>
+            <p class="page-subtitle">Tell me where your company stands and the result you are after. I answer personally. If it makes sense, we set up a short conversation to align scope, timing and price.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <div class="contact-info-box">
+                    <h3>Channels</h3>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">@</div>
+                        <div class="method-text">
+                            <h4>E-mail</h4>
+                            <p>Reply within 24 business hours.</p>
+                            <a href="mailto:tracione@pedrosajr.com.br">tracione@pedrosajr.com.br</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">W</div>
+                        <div class="method-text">
+                            <h4>WhatsApp</h4>
+                            <p>For quick alignments.</p>
+                            <a href="https://wa.me/5515981027080">+55 (15) 98102 7080</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <form action="https://formsubmit.co/tracione@pedrosajr.com.br" method="POST">
+                        
+                        <!-- Configurações ocultas para o formulário funcionar melhor -->
+                        <input type="hidden" name="_subject" value="New Lead - Pedrosa Jr (EN)">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div class="form-group">
+                            <label for="nome">Your name / company</label>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="E.g. John - Company X" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Work email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp (optional)</label>
+                            <input type="text" id="whatsapp" name="whatsapp" class="form-control" placeholder="If you prefer a reply on WhatsApp">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">What is your biggest challenge today?</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Briefly describe your project, where the company stands and the result you want..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send message</button>
+                        <p class="form-note">First conversation, no commitment. After it, I send a written proposal with scope, timing and price.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
