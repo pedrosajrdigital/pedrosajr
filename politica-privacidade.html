@@ -1,150 +1,87 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade | PedrosaJr Digital Traction</title>
-    <link rel="icon" type="image/png" href="favicon3.png">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Montserrat:wght@700;800&display=swap');
+---
+layout: default
+title: Política de Privacidade | PedrosaJr
+description: Como o site pedrosajr.com.br coleta, usa e protege seus dados, em conformidade com a LGPD.
+lang: pt-BR
+---
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #0f1115; color: #ffffff; font-family: 'Jost', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+<style>
+    .page-hero { padding-top: 180px !important; }
+    .legal-content { padding: 60px 0 100px; }
+    .legal-content .container { max-width: 1000px; }
+    .legal-content h2 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: #00D2D3; margin: 40px 0 15px; letter-spacing: -0.5px; }
+    .legal-content p { color: #b0b5c0; font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8; }
+    .legal-content ul { color: #b0b5c0; margin-bottom: 20px; padding-left: 20px; font-size: 1.05rem; }
+    .legal-content li { margin-bottom: 10px; }
+    .legal-content a { color: #00D2D3; text-decoration: none; }
+    .legal-content a:hover { text-decoration: underline; }
+    .update-date { font-size: 0.9rem; color: #7b808c; margin-bottom: 40px; display: block; font-weight: 500; }
+</style>
 
-        /* HEADER */
-        .site-header { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(15, 17, 21, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); z-index: 1000; padding: 20px 0; transition: all 0.3s ease; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .header-logo { height: 32px; width: auto; display: block; }
-        .main-nav ul { display: flex; list-style: none; gap: 40px; }
-        .main-nav a { color: #b0b5c0; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; }
-        .main-nav a:hover { color: #ffffff; }
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">Política de Privacidade</h1>
+        <p class="page-subtitle">Quais dados eu coleto, para quê, e como você controla isso.</p>
+    </div>
+</section>
 
-        /* HERO COMPACTO */
-        .page-hero { padding: 150px 20px 60px; background-color: #0f1115; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .page-title { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 15px; color: #ffffff; }
-        .page-subtitle { font-size: 1.1rem; color: #b0b5c0; }
+<section class="legal-content">
+    <div class="container">
+        <span class="update-date">Última atualização: outubro de 2026</span>
 
-        /* CONTEÚDO DE TEXTO */
-        .legal-content { padding: 80px 0; }
-        .legal-content h2 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: #00D2D3; margin: 40px 0 15px; letter-spacing: -0.5px; }
-        .legal-content p { color: #b0b5c0; font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8; }
-        .legal-content ul { color: #b0b5c0; margin-bottom: 20px; padding-left: 20px; font-size: 1.05rem; }
-        .legal-content li { margin-bottom: 10px; }
-        .legal-content a { color: #00D2D3; text-decoration: none; }
-        .legal-content a:hover { text-decoration: underline; }
-        .update-date { font-size: 0.9rem; color: #4a4d55; margin-bottom: 40px; display: block; font-weight: 500; }
+        <p>Este site é operado por Paulo Pedrosa Jr, sob a marca <strong>Pedrosa Jr — Engenharia de Tração Digital</strong>. Aqui explico, em linguagem direta, quais dados pessoais coleto quando você usa o site, por que os uso e quais são os seus direitos, em conformidade com a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
 
-        /* FOOTER */
-        .site-footer { background-color: #0b0c0f; border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 80px 0 40px; color: #8c92a0; font-size: 0.95rem; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
-        .footer-col-title { font-family: 'Montserrat', sans-serif; color: #ffffff; font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.5px; }
-        .footer-logo { height: 40px; width: auto; display: block; margin-bottom: 20px; }
-        .footer-brand p { line-height: 1.7; max-width: 350px; margin-bottom: 20px; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #8c92a0; text-decoration: none; transition: color 0.3s ease; }
-        .footer-links a:hover { color: #ffffff; }
-        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
-        .footer-legal a { color: #8c92a0; text-decoration: none; margin-left: 20px; transition: color 0.3s ease; }
-        .footer-legal a:hover { color: #ffffff; }
+        <h2>1. Dados que você me envia</h2>
+        <p>Se você preencher o formulário da página de contato, recebo as informações que você digitar:</p>
+        <ul>
+            <li>Nome e/ou nome da empresa;</li>
+            <li>E-mail;</li>
+            <li>WhatsApp, se você quiser informar (campo opcional);</li>
+            <li>A mensagem, com o que você contar sobre seu projeto ou desafio.</li>
+        </ul>
+        <p>O formulário usa o serviço FormSubmit, que apenas encaminha a mensagem para o meu e-mail. Se você preferir, também pode falar comigo por e-mail ou por WhatsApp. Nesse caso, valem as regras de privacidade do seu provedor de e-mail e do WhatsApp.</p>
 
-        @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
-        @media (max-width: 768px) {
-            .header-container { flex-direction: column; gap: 15px; }
-            .main-nav ul { gap: 20px; flex-wrap: wrap; justify-content: center; }
-            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-            .footer-brand { grid-column: span 1; }
-            .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
-            .footer-legal a { margin: 0 10px; }
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHR56KXL6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <h2>2. Para que uso esses dados</h2>
+        <ul>
+            <li>Responder a você e conversar sobre o seu projeto;</li>
+            <li>Preparar e enviar uma proposta, se a conversa avançar;</li>
+            <li>Manter contato sobre o andamento de um trabalho, se houver contratação.</li>
+        </ul>
+        <p>Não uso seus dados para enviar newsletter ou publicidade sem que você peça.</p>
 
-  gtag('config', 'G-3FHR56KXL6');
-</script>
-</head>
-<body>
+        <h2>3. Cookies e estatísticas</h2>
+        <p>Uso o Google Analytics para entender quais páginas são visitadas e se o site cumpre o seu papel. Ele grava cookies no seu navegador e registra informações como páginas visitadas, tempo de permanência, dispositivo, localização aproximada e cliques nos botões de WhatsApp e e-mail.</p>
+        <p><strong>Esses cookies só são ativados se você clicar em "Aceitar"</strong> no aviso que aparece no site. Se você recusar, o Google Analytics não é carregado e esses eventos não são registrados. Você pode mudar de ideia a qualquer momento: <a href="#" data-cookie-prefs>alterar preferências de cookies</a>. Também pode apagar ou bloquear cookies nas configurações do seu navegador.</p>
+        <p>O site também carrega fontes do Google Fonts e imagens hospedadas junto com o site. Ao carregar essas fontes, o seu endereço IP pode ser visto pelo Google, como em qualquer site que as use.</p>
 
-    <!-- HEADER -->
-    <div id="header-placeholder"></div>
+        <h2>4. Com quem os dados podem ser compartilhados</h2>
+        <p>Não vendo, alugo nem comercializo seus dados pessoais. Eles só passam por prestadores que o próprio site utiliza:</p>
+        <ul>
+            <li>FormSubmit, para entregar a mensagem do formulário ao meu e-mail;</li>
+            <li>Google (Analytics e Fonts), nos termos descritos acima;</li>
+            <li>GitHub, que hospeda o site e pode registrar dados técnicos de acesso, como o endereço IP;</li>
+            <li>Parceiros que eu convidar para um projeto, somente se você contratar o trabalho, e apenas com as informações necessárias;</li>
+            <li>Autoridades, se houver ordem legal fundamentada.</li>
+        </ul>
+        <p>Alguns desses prestadores têm servidores fora do Brasil, o que significa que seus dados podem ser tratados no exterior.</p>
 
-    <section class="page-hero">
-        <div class="container">
-            <h1 class="page-title">Política de Privacidade</h1>
-            <p class="page-subtitle">Transparência, respeito e segurança no tratamento dos seus dados.</p>
-        </div>
-    </section>
+        <h2>5. Por quanto tempo guardo os dados</h2>
+        <p>Guardo as mensagens enviadas pelo formulário pelo tempo necessário para responder, propor e executar o trabalho, e pelo prazo que a lei exigir. Se não houver continuidade, você pode pedir a exclusão a qualquer momento.</p>
 
-    <section class="legal-content">
-        <div class="container">
-            <span class="update-date">Última atualização: Julho de 2026</span>
+        <h2>6. Segurança</h2>
+        <p>O site usa conexão segura (HTTPS). Procuro coletar só o necessário e guardar as mensagens em contas protegidas. Nenhum sistema é totalmente imune a falhas, mas trato os dados que recebo com cuidado.</p>
 
-            <p>A privacidade e a segurança dos dados de nossos clientes, parceiros e visitantes são fundamentais para <strong>Pedrosa Jr - Engenharia de Tração Digital</strong>. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as suas informações pessoais quando você interage com o nosso site e serviços, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
+        <h2>7. Seus direitos (LGPD)</h2>
+        <p>Você pode pedir, a qualquer momento:</p>
+        <ul>
+            <li>Confirmação de que trato dados seus e acesso a eles;</li>
+            <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+            <li>Anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+            <li>Eliminação dos dados tratados com o seu consentimento;</li>
+            <li>Revogação do consentimento, inclusive o de cookies.</li>
+        </ul>
 
-            <h2>1. Coleta de Dados Pessoais</h2>
-            <p>Coletamos informações que você nos fornece diretamente ao utilizar nosso site, especialmente ao preencher formulários de contato ou solicitar propostas. Os dados coletados podem incluir:</p>
-            <ul>
-                <li>Nome completo e/ou Nome da Empresa;</li>
-                <li>Endereço de e-mail corporativo;</li>
-                <li>Número de telefone ou WhatsApp;</li>
-                <li>Informações profissionais e detalhes sobre os desafios do seu negócio.</li>
-            </ul>
-
-            <h2>2. Finalidade do Tratamento dos Dados</h2>
-            <p>Os dados coletados são utilizados exclusivamente para as seguintes finalidades, visando sempre o interesse legítimo de aprimorar nossa oferta de serviços e estabelecer contato comercial:</p>
-            <ul>
-                <li>Responder a dúvidas, solicitações e contatos feitos através do nosso site;</li>
-                <li>Realizar avaliações técnicas e enviar propostas comerciais de tração digital;</li>
-                <li>Manter comunicação sobre o andamento de projetos ou eventuais atualizações de serviços;</li>
-                <li>Melhorar a experiência de navegação do usuário em nosso ecossistema online.</li>
-            </ul>
-
-            <h2>3. Uso de Cookies e Tecnologias de Rastreamento</h2>
-            <p>Para otimizar o desempenho do site e nossas campanhas de engenharia de tração (Ads), utilizamos <em>cookies</em> e tecnologias similares (como Pixels). Esses pequenos arquivos de texto ajudam a entender como os visitantes interagem com nossas páginas, fornecendo métricas de acesso (como páginas mais visitadas e tempo de permanência) de forma anônima. Você pode configurar seu navegador para recusar todos ou alguns cookies, mas isso pode afetar o funcionamento de algumas áreas do site.</p>
-
-            <h2>4. Compartilhamento de Dados</h2>
-            <p>Garantimos que <strong>não vendemos, alugamos ou comercializamos</strong> seus dados pessoais sob nenhuma circunstância. Suas informações são mantidas em sigilo e poderão ser compartilhadas apenas com:</p>
-            <ul>
-                <li>Nossa equipe interna de consultores para análise técnica do seu projeto;</li>
-                <li>Sistemas terceirizados de gestão empresarial (CRM) utilizados estritamente para nossa operação interna, os quais também estão em conformidade com as leis de privacidade;</li>
-                <li>Autoridades legais, caso haja ordem judicial fundamentada exigindo tal compartilhamento.</li>
-            </ul>
-
-            <h2>5. Segurança das Informações</h2>
-            <p>Adotamos medidas técnicas, administrativas e organizacionais de alto padrão para proteger seus dados contra acessos não autorizados, perdas, destruição ou alterações. Utilizamos conexões seguras (SSL) e nossos servidores possuem restrição de acesso lógico.</p>
-
-            <h2>6. Seus Direitos (LGPD)</h2>
-            <p>Como titular dos dados, você tem o direito de, a qualquer momento e mediante requisição formal:</p>
-            <ul>
-                <li>Confirmar a existência de tratamento de seus dados;</li>
-                <li>Acessar as informações que possuímos sobre você;</li>
-                <li>Solicitar a correção de dados incompletos, inexatos ou desatualizados;</li>
-                <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários;</li>
-                <li>Revogar o consentimento fornecido anteriormente.</li>
-            </ul>
-
-            <h2>7. Contato e Dúvidas</h2>
-            <p>Se você tiver qualquer dúvida sobre esta Política de Privacidade ou desejar exercer seus direitos relacionados aos seus dados, entre em contato conosco através do e-mail: <a href="mailto:tracione@pedrosajr.com.br">tracione@pedrosajr.com.br</a>.</p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <div id="footer-placeholder"></div>
-
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header-placeholder').innerHTML = data);
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-    </script>
-</body>
-</html>
+        <h2>8. Contato</h2>
+        <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, escreva para <a href="mailto:tracione@pedrosajr.com.br">tracione@pedrosajr.com.br</a>. Respondo pessoalmente.</p>
+    </div>
+</section>
