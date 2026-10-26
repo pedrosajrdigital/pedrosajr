@@ -891,3 +891,18 @@ textarea.form-control {
     }
 }
 .company-content ul.lista-atuacao { margin-bottom: 22px; }
+
+/* Imagem da seção "Como posso ajudar" (preenche o espaço livre sob o texto) */
+.methodology-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 35% center;
+    border-radius: 8px;
+    margin-top: 36px;
+    box-shadow: 0 12px 30px rgba(15, 17, 21, 0.25);
+}
+@media (max-width: 992px) {
+    .methodology-image { aspect-ratio: 16 / 9; }
+}
