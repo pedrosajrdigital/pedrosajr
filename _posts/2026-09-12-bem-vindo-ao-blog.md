@@ -3,14 +3,14 @@ layout: post
 title: "Bem-vindo ao Blog da PedrosaJr"
 lang: pt-BR
 author: Paulo Pedrosa Jr.
-excerpt: "Por que estamos trazendo nossos artigos para cá — e o que você vai encontrar neste espaço daqui pra frente."
+excerpt: "Por que os artigos passam a ter um endereço fixo aqui — e o que este espaço vai reunir daqui pra frente."
 ---
 
-Este é o primeiro artigo do nosso blog — e ele existe por um motivo simples: conteúdo bom merece um endereço fixo.
+Este é o primeiro artigo do blog — e ele existe por um motivo simples: conteúdo bom merece um endereço fixo.
 
-Depois de mais de 30 anos transitando entre indústria, mercado automotivo e, mais recentemente, estratégia digital, aprendi que o mercado brasileiro é um dos ambientes mais exigentes para se testar uma estratégia. Quem consegue crescer aqui, com a complexidade regulatória, a instabilidade macroeconômica e a concorrência que temos, carrega um repertório que se aplica em qualquer lugar do mundo.
+Depois de mais de 30 anos entre indústria, mercado automotivo e, mais recentemente, estratégia digital, uma conclusão se impõe: o mercado brasileiro é um dos ambientes mais exigentes para testar uma estratégia. Quem consegue crescer aqui, com a complexidade regulatória, a instabilidade macroeconômica e a concorrência existentes, carrega um repertório que se aplica em qualquer lugar do mundo.
 
-É esse repertório — engenharia de performance digital, tração de marca e crescimento sustentável — que vamos compartilhar aqui, em artigos originais e também em versões revisadas de textos que antes publicávamos apenas como notas soltas em outras redes.
+É esse repertório — engenharia de performance digital, tração de marca e crescimento sustentável — que este espaço reúne, em artigos originais e em versões revisadas de textos antes publicados apenas como notas soltas em outras redes.
 
 Fique à vontade para explorar, comentar e levar essas ideias para dentro do seu próprio negócio.
 
