@@ -906,3 +906,57 @@ textarea.form-control {
 @media (max-width: 992px) {
     .methodology-image { aspect-ratio: 16 / 9; }
 }
+
+/* CASO EM DESTAQUE (Bongas): bloco largo com texto e tabelas */
+.case-feature { padding: 20px 0 10px; }
+.case-feature-box {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 50px 48px;
+    background-color: #22252B;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid #00D2D3;
+    border-radius: 8px;
+}
+.case-feature-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: #ffffff;
+    margin: 8px 0 18px;
+}
+.case-feature-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin: 34px 0 14px;
+}
+.case-feature-box p { color: #b0b5c0; line-height: 1.75; margin-bottom: 16px; }
+.case-feature-box .case-lead { font-size: 1.1rem; color: #d3d6de; }
+.case-list { margin: 0 0 8px 20px; color: #b0b5c0; line-height: 1.7; }
+.case-list li { margin-bottom: 10px; }
+.case-table-wrap { overflow-x: auto; margin: 22px 0 8px; }
+.case-table { width: 100%; border-collapse: collapse; font-size: 0.97rem; color: #d3d6de; }
+.case-table caption {
+    caption-side: top; text-align: left; padding-bottom: 10px;
+    font-size: 0.85rem; letter-spacing: 0.4px; color: #8d93a1;
+}
+.case-table th, .case-table td { padding: 12px 14px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.07); white-space: nowrap; }
+.case-table th:first-child, .case-table td:first-child { text-align: left; white-space: normal; }
+.case-table thead th { color: #00D2D3; font-weight: 600; border-bottom: 1px solid rgba(0,210,211,0.4); }
+.case-table td.up { color: #00D2D3; font-weight: 600; }
+.case-table td.down { color: #F6A04D; font-weight: 600; }
+.case-table--months tr.group td { text-align: left; padding-top: 18px; color: #ffffff; font-weight: 600; border-bottom: none; }
+.case-table--months tr.current td { color: #ffffff; font-weight: 600; }
+.case-note { font-size: 0.85rem; color: #8d93a1 !important; margin-top: 28px; }
+@media (max-width: 768px) {
+    .case-feature-box { padding: 32px 22px; }
+    .case-feature-title { font-size: 1.5rem; }
+    .case-table th, .case-table td { padding: 10px 8px; font-size: 0.88rem; }
+}
+@media (max-width: 768px) {
+    .case-table th, .case-table td { white-space: normal; padding: 9px 5px; font-size: 0.82rem; }
+    .case-table th:first-child, .case-table td:first-child { width: 34%; }
+    .case-table--months th:first-child, .case-table--months td:first-child { width: auto; }
+    .case-table--months th, .case-table--months td { padding: 9px 3px; font-size: 0.78rem; }
+}
