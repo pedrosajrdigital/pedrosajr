@@ -705,3 +705,126 @@
 .wa-float:hover, .wa-float:focus-visible { background: rgba(0,210,211,.3); border-color: #fff; transform: translateY(-2px); }
 .wa-float:focus-visible { outline: 2px solid #00D2D3; outline-offset: 3px; }
 @media (max-width: 480px) { .wa-float span { display: none; } .wa-float { padding: 13px; } }
+
+/* =========================================
+   CLASSES QUE ANTES VIVIAM NO <style> EMBUTIDO
+   de sobre.html, projetos-tracionados.html e
+   contato.html (e nas versões /en/). Consolidadas
+   aqui pra não depender de !important por página
+   (mesmo processo feito no style.css do Drivati).
+   ========================================= */
+
+/* Modificador de .page-hero pras páginas internas (sobre, casos, contato):
+   o header fixo precisa de mais espaço aqui do que no blog/post, que usam
+   a .page-hero "padrão" (100px) sem esse modificador. */
+.page-hero--wide {
+    padding-top: 180px;
+}
+
+/* SOBRE — grid de 2 colunas do fundador e da empresa */
+.founder-grid, .company-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+.founder-photo {
+    max-width: 400px;
+    max-height: 480px;
+    margin: 0 auto;
+}
+.founder-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 992px) {
+    .founder-grid, .company-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .founder-photo {
+        max-width: 300px;
+    }
+}
+
+/* CASOS — modificador de .projects-grid: 2 colunas (a home usa 3) e vira 1
+   coluna direto em 992px, sem o passo intermediário de 2 colunas da home. */
+.projects-grid--cases {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+@media (max-width: 992px) {
+    .projects-grid--cases {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CONTATO — grid de 2 colunas e caixa do formulário */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+.contact-form-box {
+    background-color: #22252B;
+    padding: 50px 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.method-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #22252B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #00D2D3;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #b0b5c0;
+    font-size: 0.95rem;
+}
+.form-control {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(15, 17, 21, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+}
+.form-note {
+    margin-top: 18px;
+    color: #8d93a1;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}

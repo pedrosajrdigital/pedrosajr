@@ -5,25 +5,7 @@ description: Três problemas reais da indústria automotiva que resolvi, contado
 lang: pt-BR
 ---
 
-<style>
-    /* Corrige a sobreposição do header fixo */
-    .page-hero {
-        padding-top: 180px !important;
-    }
-    /* Restaura o grid de 2 colunas dos cases */
-    .projects-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 40px !important;
-    }
-    @media (max-width: 992px) {
-        .projects-grid {
-            grid-template-columns: 1fr !important;
-        }
-    }
-</style>
-
-<section class="page-hero">
+<section class="page-hero page-hero--wide">
     <div class="container">
         <span class="overline">Histórico</span>
         <h1 class="page-title">Três problemas que resolvi</h1>
@@ -33,7 +15,7 @@ lang: pt-BR
 
 <section class="portfolio-section">
     <div class="container">
-        <div class="projects-grid">
+        <div class="projects-grid projects-grid--cases">
 
             <!-- CASE 1: Mercedes-Benz -->
             <div class="project-card">
