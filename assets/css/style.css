@@ -828,3 +828,66 @@ textarea.form-control {
         gap: 50px;
     }
 }
+
+/* =========================================
+   SOBRE e CASOS — classes usadas no HTML que nunca tiveram estilo
+   (parágrafos sem respiro, etiquetas coladas, valores em texto corrido,
+   seções sem padding antes do banner)
+   ========================================= */
+.page-hero .container > p { max-width: 760px; margin-left: auto; margin-right: auto; }
+.page-hero .page-subtitle { margin-bottom: 20px; }
+.page-hero .container > p:not(.page-subtitle) { color: #b0b5c0; line-height: 1.7; }
+
+.founder-section, .company-section, .portfolio-section { padding: 90px 0; }
+.founder-text p, .company-content p, .philosophy-card p {
+    color: #b0b5c0;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+.founder-text h2, .company-content h2, .company-content h3 { margin-bottom: 20px; }
+.company-content h4, .philosophy-card h4 { margin: 28px 0 14px; }
+.philosophy-card { padding: 10px 0; }
+
+.values-box {
+    margin-top: 36px;
+    padding: 28px 30px;
+    background-color: #22252B;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+}
+.values-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+.values-list { display: flex; flex-direction: column; gap: 12px; }
+.value-tag {
+    display: block;
+    color: #b0b5c0;
+    line-height: 1.6;
+    padding-left: 16px;
+    border-left: 2px solid #00D2D3;
+    font-size: 0.97rem;
+}
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.4px;
+    color: #00D2D3;
+    border: 1px solid rgba(0, 210, 211, 0.35);
+    border-radius: 999px;
+}
+.portfolio-section .projects-grid--cases { align-items: stretch; }
+/* terceiro caso sozinho na última linha: centraliza em vez de ficar à esquerda */
+@media (min-width: 993px) {
+    .projects-grid--cases .project-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 20px);
+    }
+}
+.company-content ul.lista-atuacao { margin-bottom: 22px; }
