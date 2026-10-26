@@ -3,15 +3,15 @@ layout: post
 title: "Welcome to the PedrosaJr Blog"
 lang: en
 author: Paulo Pedrosa Jr.
-excerpt: "Why we're bringing our articles here — and what you'll find in this space going forward."
+excerpt: "Why the articles now have a permanent home here — and what this space will gather going forward."
 permalink: /en/blog/:year/:month/:day/:title/
 ---
 
-This is the first post on our blog — and it exists for a simple reason: good content deserves a permanent home.
+This is the first post on the blog — and it exists for a simple reason: good content deserves a permanent home.
 
-After more than 30 years moving between industry, the automotive market and, more recently, digital strategy, I've learned that the Brazilian market is one of the most demanding environments to stress-test a strategy. Anyone who can grow here — through regulatory complexity, macroeconomic instability and the level of competition we have — carries a playbook that travels anywhere in the world.
+After more than 30 years moving between industry, the automotive market and, more recently, digital strategy, one conclusion stands out: the Brazilian market is one of the most demanding environments to stress-test a strategy. Anyone who can grow here — through regulatory complexity, macroeconomic instability and the level of competition that exists — carries a playbook that travels anywhere in the world.
 
-That playbook — digital performance engineering, brand traction and sustainable growth — is what we'll be sharing here, in original articles and in revised versions of pieces we previously published only as standalone notes elsewhere.
+That playbook — digital performance engineering, brand traction and sustainable growth — is what this space gathers, in original articles and in revised versions of pieces previously published only as standalone notes elsewhere.
 
 Feel free to explore, comment, and bring these ideas into your own business.
 
