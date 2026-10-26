@@ -5,44 +5,8 @@ description: Paulo Pedrosa Jr: mais de 30 anos em negócios, vendas e marketing,
 lang: pt-BR
 ---
 
-<style>
-    /* Corrige a sobreposição do header fixo e o espaçamento */
-    .page-hero {
-        padding-top: 180px !important;
-    }
-    /* Restaura o grid de 2 colunas do fundador e da empresa */
-    .founder-grid, .company-grid {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 80px !important;
-        align-items: center !important;
-    }
-    
-    /* LIMITA O TAMANHO DA FOTO DO FUNDADOR */
-    .founder-photo {
-        max-width: 400px !important;
-        max-height: 480px !important;
-        margin: 0 auto !important;
-    }
-    .founder-photo img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-    }
-
-    @media (max-width: 992px) {
-        .founder-grid, .company-grid {
-            grid-template-columns: 1fr !important;
-            gap: 50px !important;
-        }
-        .founder-photo {
-            max-width: 300px !important;
-        }
-    }
-</style>
-
 <!-- HERO DA PÁGINA -->
-    <section class="page-hero">
+    <section class="page-hero page-hero--wide">
         <div class="container">
             <span class="overline">Sobre</span>
             <h1 class="page-title">Quem vai trabalhar com você</h1>

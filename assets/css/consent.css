@@ -1,0 +1,32 @@
+/* Banner de aviso de cookies (mesmo padrão do drivati.com.br/assets/css/consent.css,
+   com as cores do pedrosajr.com.br em vez das do Drivati). */
+.cookie-banner {
+    position: fixed; left: 16px; bottom: 16px; z-index: 900;
+    width: 320px; max-width: calc(100vw - 32px);
+    padding: 14px 16px;
+    background: rgba(15, 17, 21, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem; line-height: 1.5; color: #b0b5c0;
+    opacity: 0; transform: translateY(8px); pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.cookie-banner.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.cookie-banner p { margin: 0 0 10px; }
+.cookie-banner a { color: #00D2D3; }
+.cookie-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.cookie-btn {
+    font: inherit; font-weight: 600; cursor: pointer;
+    padding: 6px 14px; border-radius: 999px;
+    background: transparent; color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.cookie-btn:hover { border-color: #00D2D3; }
+.cookie-btn--primary { background: #00D2D3; border-color: #00D2D3; color: #0f1115; }
+.cookie-btn--primary:hover { background: #00b8b9; border-color: #00b8b9; }
+.cookie-btn:focus-visible, .cookie-banner a:focus-visible { outline: 2px solid #00D2D3; outline-offset: 2px; }
+@media (max-width: 480px) { .cookie-banner { left: 12px; right: 12px; bottom: 12px; width: auto; } }
+@media (prefers-reduced-motion: reduce) { .cookie-banner { transition: none; } }

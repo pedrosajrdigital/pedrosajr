@@ -1,13 +1,38 @@
 <footer class="site-footer" id="contato">
     <div class="container">
         <div class="footer-grid">
-            
+
             <div class="footer-brand">
                 <img src="/black_new.png" alt="Logo Pedrosa Jr" class="footer-logo">
+                {% if page.lang == 'en' %}
+                <p>Digital Traction Engineering. I organize brand, data and digital presence for companies that want to grow sustainably.</p>
+                {% else %}
                 <p>Engenharia de Tração Digital. Organizo marca, dados e presença digital para empresas que querem crescer de forma sustentável.</p>
+                {% endif %}
                 <a href="mailto:tracione@pedrosajr.com.br" style="color: #ffffff; text-decoration: none; font-weight: 500; border-bottom: 1px solid #ffffff; padding-bottom: 2px;">tracione@pedrosajr.com.br</a>
             </div>
 
+            {% if page.lang == 'en' %}
+            <div class="footer-nav">
+                <h4 class="footer-col-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="/en/sobre.html">About</a></li>
+                    <li><a href="/en/projetos-tracionados.html">Cases</a></li>
+                    <li><a href="/en/blog.html">Blog</a></li>
+                    <li><a href="/en/contato.html">Contact</a></li>
+                    <!-- Botões de Idioma -->
+                <li><a href="/">PT</a> | <a href="/en/">EN</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="footer-col-title">Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="https://www.linkedin.com/in/paulopedrosajr/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.youtube.com/@PedrosaJrDigitalTraction" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+            {% else %}
             <div class="footer-nav">
                 <h4 class="footer-col-title">Navegação</h4>
                 <ul class="footer-links">
@@ -27,15 +52,20 @@
                     <li><a href="https://www.youtube.com/@PedrosaJrDigitalTraction" target="_blank">YouTube</a></li>
                 </ul>
             </div>
+            {% endif %}
 
         </div>
 
         <div class="footer-bottom">
             <div class="copyright">
-                &copy; 2026 Paulo Pedrosa Jr. Todos os direitos reservados.
+                &copy; 2026 Paulo Pedrosa Jr. {% if page.lang == 'en' %}All rights reserved.{% else %}Todos os direitos reservados.{% endif %}
             </div>
             <div class="footer-legal">
+                {% if page.lang == 'en' %}
+                <a href="/en/politica-privacidade.html">Privacy Policy</a>
+                {% else %}
                 <a href="/politica-privacidade.html">Política de Privacidade</a>
+                {% endif %}
             </div>
         </div>
     </div>
