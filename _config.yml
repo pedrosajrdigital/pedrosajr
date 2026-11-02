@@ -1,5 +1,5 @@
 title: "Pedrosa Jr | Digital Traction Engineering"
-description: "Engenharia de Tração Digital — estratégia, marca e crescimento sustentável para empresas e projetos de alto valor."
+description: "Estratégia comercial e digital para a indústria — direção de marketing sob demanda e treinamento prático de IA para indústrias e empresas B2B."
 url: "https://pedrosajr.com.br"
 
 # ATENÇÃO: não colocar "permalink:" aqui no nível raiz.
@@ -12,10 +12,12 @@ url: "https://pedrosajr.com.br"
 # - jekyll-sitemap  -> gera /sitemap.xml automaticamente
 # - jekyll-seo-tag  -> gera <title>/meta description/Open Graph em cada página
 # - jekyll-feed     -> gera /feed.xml (RSS) do blog
+# - jekyll-redirect-from -> redireciona URLs antigas (ex.: /contato/ do site WordPress antigo)
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-redirect-from
 
 defaults:
   - scope:
